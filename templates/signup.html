@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-style">
+	<h1>Sign Up</h1>
+    <form class="site-form" action="." method="post">
+        {% csrf_token %}
+        {{ form }}
+        <br><br>
+        <input class="submit" type="submit" value="Sign Up">
+    </form>
+    <p>if Already have an account? <a href="{% url 'login' %}" style="color: #646c60; margin-left: 20px;">Back to Login</a></p>
+
+	</form>
+</div>
+<script type="text/javascript">
+	document.getElementsByTagName("span")[0].innerHTML="";
+	document.getElementsByTagName("span")[1].innerHTML="";
+</script>
+
+<style>
+    .form-style {
+        background-color: #ffffff; 
+        border: 1px solid #ddd; 
+        padding: 20px; 
+        border-radius: 10px; 
+        max-width: 400px; 
+        margin: 0 auto; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+		margin-top: 100px;
+    }
+
+    h1 {
+        text-align: center; /* Center the heading */
+    }
+
+    .site-form {
+        margin: 20px 0; /* Add some top and bottom margin for spacing */
+    }
+
+    .submit {
+        background-color: #007BFF; /* Change the button background color */
+        color: #fff; /* Change the button text color to white */
+        padding: 10px 20px; /* Add padding to the button */
+        border: none;
+        border-radius: 5px; /* Rounded corners for the button */
+        cursor: pointer;
+		margin-left: 120px;
+    }
+
+    .submit:hover {
+        background-color: #0056b3; /* Change the button color on hover */
+    }
+
+    p {
+        text-align: center; /* Center the "Not registered?" text */
+        margin-top: 20px; /* Add top margin for spacing */
+    }
+</style>
+{% endblock %}

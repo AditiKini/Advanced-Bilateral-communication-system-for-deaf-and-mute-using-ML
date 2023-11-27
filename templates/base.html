@@ -1,0 +1,287 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    h2 {
+      color: white;
+    }
+     
+  
+        nav ul {
+            list-style-type: none;
+            margin-left: 600px;
+            
+        }
+
+        nav li {
+            float: left;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 15px;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 0px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #e7cf3d;
+            color: white;
+        }
+
+    .form-style button {
+
+      width: 89%;
+      height: 70%;
+      padding: 5%;
+      background: white;
+      border-bottom: 2px solid #393f4d;
+      ;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      color: #393f4d;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: "Times New Roman";
+    }
+
+    .form-style button:hover {
+      background-color: white;
+      color: #feda6a;
+      font-weight: bold;
+    }
+
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 50;
+      overflow-x: hidden;
+      padding-top: 20px;
+
+    }
+
+    .left {
+      left: 15;
+      border-right: 0px #feda6a solid;
+    }
+
+    .right {
+      right: 0;
+      border-left: 1px #feda6a solid;
+    }
+
+    .mytext {
+      border: 1px solid #393f4d;
+      border-right: none;
+      padding: 4px;
+      margin: 0px;
+      float: left;
+      height: 32px;
+      overflow: hidden;
+      line-height: 16px;
+      width: 300px;
+      margin-left: 54px;
+    }
+
+    .mic {
+      border: 1px solid #393f4d;
+      background: #feda6a;
+      vertical-align: top;
+      padding: 0px;
+      margin: 0;
+      float: left;
+      height: 42px;
+      overflow: hidden;
+      width: 5em;
+      text-align: center;
+      line-height: 16px;
+    }
+
+
+    .submit {
+      border: 1px solid #393f4d;
+      height: 42px;
+      width: 160px;
+      text-align: center;
+      background-color: hsl(39, 100%, 50%);
+      color: #393f4d;
+      font-weight: bold;
+      font-size: 24px;
+      font-family: "Times New Roman";
+      vertical-align: top;
+    }
+
+    .submit:hover {
+      background-color: white;
+      color: #feda6a;
+      font-weight: bold;
+    }
+
+    .td {
+      color: #feda6a;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    body {
+      background-color: #302f2c;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    /* #FF335E; */
+
+    .form-style {
+      font: 95% Arial, Helvetica, sans-serif;
+      max-width: 200px;
+      padding: 16px;
+      margin-left: 540px;
+    }
+
+    .form-style h1,
+    .form-style a {
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "Times New Roman";
+      text-align: center;
+      margin: -16px -16px 16px -16px;
+      color: orange;
+    }
+
+    .form-style input[type="text"],
+    .form-style input[type="password"],
+    .form-style input[type="date"],
+    .form-style input[type="datetime"],
+    .form-style input[type="email"],
+    .form-style input[type="number"],
+    .form-style input[type="search"],
+    .form-style input[type="time"],
+    .form-style input[type="url"],
+    .form-style textarea,
+    .form-style select {
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%;
+      background: white;
+      margin-bottom: 4%;
+      border: 1px solid #ccc;
+      padding: 3%;
+      color: #0000a0;
+      font: 95% Arial, Helvetica, sans-serif;
+    }
+
+    .form-style input[type="text"]:focus,
+    .form-style input[type="password"]:focus,
+    .form-style input[type="date"]:focus,
+    .form-style input[type="datetime"]:focus,
+    .form-style input[type="email"]:focus,
+    .form-style input[type="number"]:focus,
+    .form-style input[type="search"]:focus,
+    .form-style input[type="time"]:focus,
+    .form-style input[type="url"]:focus,
+    .form-style textarea:focus,
+    .form-style select:focus {
+      box-shadow: 0 0 5px #0000a0;
+      padding: 3%;
+      border: 1px solid #0000a0;
+    }
+
+    .site-form span,
+    label {
+      color: #feda6a;
+    }
+
+    .errorlist {
+      color: red;
+      font-weight: bold;
+    }
+
+    .container {
+            display: flex; /* Use flexbox to arrange items in a row */
+            justify-content: space-between; /* Push items to the edges (left and right) */
+            align-items: center; /* Center vertically within the container */
+            background-color: #302f2c;
+            color: white;
+            padding-top: 80px;
+        } 
+
+        .left-div {
+            float: left; /* Float the left div to the left */
+            margin-left: -1050px;
+             /* Set the width to 50% for a two-column layout */
+        }
+
+        .right-div{
+          margin-left: 50px;
+        }
+
+
+        .circle-image {
+            border-radius: 50%;
+            width: 350px;
+            height: 350px;
+        }
+
+        .button{
+          border-radius: 10px;
+
+        }
+
+  </style>
+  <title>Homepage</title>
+</head>
+<div style="background-color:#FF335E;color:black;padding:10 10 1 10;margin-bottom:0;">
+
+</div>
+<br>
+
+<body>
+  <nav>
+    <ul>
+      <li><a class="active" href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'animation' %}">Convertor</a></li>
+      {% if not user.is_authenticated %}
+      {% endif %}
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'logout' %}">Log-Out</a></li>
+      {% else %}
+      
+      {% endif %}
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrapper">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+
+</body>
+
+</html>

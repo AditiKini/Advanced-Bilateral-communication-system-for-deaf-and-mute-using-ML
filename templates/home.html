@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container">
+	<div class="left-div">
+		<img src="https://sunshinehouse.com/media/v2vfwfx3/58448_47e37c04827a4f6a8906af0f8942fb6c_1576506643.jpeg"
+			alt="" class="circle-image" />
+	</div>
+	<div class="right-div">
+		<h2 style="font-size: 1.8rem;">Let's Learn</h2>
+		<h1 style="font-size: 2.5rem;">Indian Sign Language</h1>
+		<p style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: rgb(222, 218, 218);">Sign language is the mother language of Deaf and Mute people. This includes the combination of hand gestures, arms or body and facial expressions. Deaf and mute people in India are using Indian Sign Language (ISL) as the main mode of communication between them. ISL is a natural sign language which has its own Sound lore, syntax, and grammar.</p>
+    <p id="more-text" style="color: rgb(222, 218, 218);">The primary goal of System is to remove the communication barrier between Deaf and Mute people and the rest of the society by converting Text or Speech into Sign and Viceversa. For this System Machine Learning (ML) and Deep Learning (DL) techniques are used for the recognition task. ML technique uses the extracted features to classify the videos using supervised and unsupervised learning while DL technique use for detection of hand gestures and processing of these data are the most important options required for any system that supports DnM. </p>
+    <a href="javascript:void(0);" id="read-more-link" style="text-decoration: none;color: rgb(255, 178, 34);">Read more...</a>
+
+    <script>
+        var moreText = document.getElementById("more-text");
+        var readMoreLink = document.getElementById("read-more-link");
+
+        readMoreLink.addEventListener("click", function() {
+            if (moreText.style.display === "none" || moreText.style.display === "") {
+                moreText.style.display = "inline"; 
+                readMoreLink.textContent = "Read less";
+            } else {
+                moreText.style.display = "none"; 
+                readMoreLink.textContent = "Read more...";
+            }
+        });
+    </script>
+	</div>
+</div>
+
+<div class="form-style">
+	<a href="{% url 'animation' %}"><button class="button">Let's Go</button></a>
+	</div>
+{% endblock %}
